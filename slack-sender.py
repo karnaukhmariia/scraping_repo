@@ -16,7 +16,7 @@ json_data = {
     'text': 'Hello, World!',
 }
 
-response = requests.post(f'https://hooks.slack.com/services/T0838R6359U/B083FGRMHJ6/{os.environ.get('SLACK_ID')}',
+response = requests.post(f'https://hooks.slack.com/services/T0838R6359U/B083FGRMHJ6/{os.environ.get("SLACK_ID")}',
                          headers=headers, 
                          json=json_data)
 
