@@ -21,17 +21,11 @@ jobs:
           
       - name: install python packages
         run: |
-          pip install requests
           python -m pip install --upgrade pip
           pip install python-dotenv
-    
+          pip install requests
+
       - name: execute py script # run main.py
         env:
           SLACK_ID: ${{ secrets.SLACK_ID }}
-        run: python task.py
-  
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: main 
+        run: python sender.py
