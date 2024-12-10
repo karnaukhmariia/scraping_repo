@@ -1,4 +1,4 @@
-name: run sender.py
+name: run slack-sender.py
 
 on:
   push:
@@ -27,4 +27,4 @@ jobs:
       - name: execute py script # run main.py
         env:
           SLACK_ID: ${{ secrets.SLACK_ID }}
-        run: python sender.py
+        run: python slack-sender.py
