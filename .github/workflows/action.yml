@@ -1,5 +1,4 @@
-
-name: run task.py
+name: run sender.py
 
 on:
   push:
